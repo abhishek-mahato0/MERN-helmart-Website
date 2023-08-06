@@ -88,7 +88,7 @@ const Myorder = () => {
                                 <h3>{it.name}</h3>
                               </div>
                               <div className="order-price">
-                                <h3>Price:${it.price}</h3>
+                                <h3>Price: Rs.{it.price}</h3>
                               </div>
                               <div className="order-cat centerv">
                                 <h3>
@@ -112,7 +112,7 @@ const Myorder = () => {
                     <h4>Phone: {item.shippingInfo.phone}</h4>
                     <h4>Date: {item.createdAt.split('GMT+0545')}</h4>
                     <h4>Status: "{item.status}"</h4>
-                    <h4>Total: {item.total}</h4>
+                    <h4>Total: Rs.{item.total}</h4>
                     {item.status !== 'canceled' && (
                       <button
                         className="cancel-order"
