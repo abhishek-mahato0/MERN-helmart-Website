@@ -1,0 +1,338 @@
+.sing-link {
+  margin: 5px 10px;
+  width: 10%;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sing-link > .link {
+  font-size: large;
+  text-decoration: none;
+}
+.single {
+  width: 100%;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+.container {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  width: 70%;
+  height: max-content;
+  background-color: rgb(216, 216, 217);
+  margin: 10px 15%;
+}
+.price {
+  display: flex;
+  align-items: center;
+}
+.price > h3 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.price > p {
+  margin-left: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.star {
+  display: flex;
+  margin-bottom: 5px;
+  align-items: center;
+}
+.star > p {
+  margin-left: 5px;
+  color: rgb(243, 12, 12);
+}
+.rating > span {
+  color: red;
+  margin-left: 3px;
+}
+.centerv {
+  display: flex;
+  align-items: center;
+}
+.single-image {
+  width: 80%;
+  height: 100%;
+  margin-right: 30px;
+}
+.slide-images {
+  height: 100%;
+  width: 100%;
+}
+.crousel {
+  height: 100%;
+  padding: 10px;
+}
+.slide-images > img {
+  width: 100px;
+  height: 280px;
+}
+.please {
+  color: white;
+  font-size: xx-large;
+}
+.name > h3 {
+  font-size: 20px;
+  margin: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.single-desc {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.single-desc > .price {
+  margin-bottom: 5px;
+}
+.cat span {
+  text-transform: uppercase;
+  font-size: 15px;
+  margin-left: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.inStock {
+  color: green;
+  font-size: larger;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.oStock {
+  color: red;
+  font-size: larger;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.single-desc > .cat {
+  margin-bottom: 4px;
+}
+.pdes {
+  margin-bottom: 5px;
+}
+.single-desc > .pdes > span {
+  font-size: large;
+  text-align: justify;
+  color: rgb(76, 35, 1);
+}
+.single-desc > .deli > span {
+  font-size: large;
+  text-align: justify;
+  color: rgb(255, 3, 3);
+}
+.single-desc > .abtn {
+  margin: 10px 25%;
+  width: 50%;
+}
+.abtn > button {
+  width: 100%;
+  background-color: green;
+  border: 1px solid green;
+  color: wheat;
+  padding: 10px;
+  font-size: medium;
+  border-radius: 10px;
+}
+.abtn button:hover {
+  background-color: red;
+  color: black;
+}
+
+.qty {
+  display: flex;
+  padding: 5px;
+  font-size: 20px;
+}
+select {
+  font-size: 15px;
+}
+.review-container {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  background-color: rgb(218, 223, 223);
+  align-items: center;
+  justify-content: flex-start;
+  margin: 20px 20%;
+  padding: 10px;
+}
+.rev-content > .user {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 10px;
+  gap: 5px;
+}
+.stars {
+  display: flex;
+}
+.related-prod {
+  margin: 10px 2.5vw 10px 2.5vw;
+  width: 95vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.review {
+  display: flex;
+  width: 70%;
+  background-color: rgb(228, 246, 246);
+  margin: 10px;
+  padding: 10px 30px;
+  align-items: center;
+  justify-content: flex-start;
+}
+.review > .rev-img {
+  width: 13%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rev-img > img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.review > .rev-content {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+.review-from {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+.rev-form {
+  width: 50%;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+}
+.rev-form > .star {
+  margin-left: 10px;
+}
+.rev-form > input {
+  height: 40px;
+  margin: 10px auto;
+  font-weight: bold;
+  outline: none;
+  width: 50%;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: rgb(0, 136, 255);
+  border: none;
+}
+.rev-form > input:hover {
+  background-color: rgb(255, 0, 0);
+  color: white;
+  transform: scale(1.02);
+}
+.rev-from > textarea {
+  margin: 10px auto;
+  font-weight: bold;
+  outline: none;
+}
+.related-prod > h1 {
+  border-bottom: 2px solid black;
+  margin-bottom: 10px;
+}
+.related-prod > .rel-card-div {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+.underline {
+  text-decoration: line-through red;
+  font-size: 20px;
+  margin-right: 5px;
+  color: rgb(0, 0, 0);
+}
+.underline > span {
+  text-decoration: none !important;
+}
+.fix-back {
+  position: fixed;
+  top: 60%;
+  right: -500px;
+  background-image: url('/Users/abhishekmahato/Desktop/Mern /working/BikersMart/client/public/images/poster2.png');
+  background-size: cover; /* Adjust as needed */
+  height: 600px;
+  border-radius: 50%;
+  width: 1000px;
+  z-index: -999;
+  rotate: 90%;
+  transform: rotate(180);
+  background-blend-mode: multiply;
+  background-color: rgb(70, 70, 70);
+  opacity: 1.4;
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 99% !important;
+    margin: 10px auto !important;
+  }
+  .single-image {
+    width: 95%;
+  }
+  .slide-images {
+    height: 100%;
+    width: 100%;
+  }
+  .crousel {
+    padding: 2px;
+  }
+  .slide-images > img {
+    height: 150px;
+  }
+  .fix-back {
+    display: none;
+  }
+  .sing-link {
+    width: 30%;
+  }
+  .review-container {
+    width: 100%;
+  }
+  .review-container {
+    width: 100%;
+    margin: 10px auto;
+    padding: 5px;
+  }
+  .stars {
+    display: flex;
+  }
+  .related-prod {
+    margin: 10px auto;
+    width: 98vw;
+  }
+  .review {
+    width: 90%;
+    padding: 10px auto;
+  }
+  .rev-form {
+    width: 80%;
+  }
+  .user {
+    display: flex !important;
+  }
+  .user > .stars {
+    display: flex !important;
+  }
+
+  .related-prod > .rel-card-div {
+    width: 98%;
+    margin: 2px auto;
+    display: flex;
+    flex-direction: column;
+  }
+}

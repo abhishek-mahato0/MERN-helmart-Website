@@ -1,0 +1,90 @@
+.prod-card {
+  margin: 5px 10px 30px 10px;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  font-family: Arial, Helvetica, sans-serif;
+  align-items: center;
+  border: 1px solid rgb(203, 202, 202);
+  cursor: pointer;
+  height: max-content;
+  transition: height 5s ease-out;
+}
+.prod-card > .prod-link {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  align-items: center;
+  padding-bottom: 10px;
+  cursor: pointer;
+  height: 50%;
+  text-decoration: none;
+  color: black;
+}
+.prod-link > .prod-img {
+  width: 100%;
+  cursor: pointer;
+  height: 100%;
+  padding: 5px;
+}
+.prod-img > img {
+  width: 100%;
+  z-index: 5;
+  cursor: pointer;
+  height: 180px;
+}
+.prod-name {
+  width: 100%;
+  margin: 5px;
+}
+.prod-name > p {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+.prod-price > p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 2.5px 5px;
+  text-align: center;
+}
+.prod-link > .rating {
+  display: flex;
+  color: rgb(255, 0, 0);
+}
+.prod-card > .rating {
+  display: flex;
+  color: rgb(255, 0, 0);
+}
+.prod-card > .cart-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+  height: 40px;
+}
+.cart-btn > button {
+  width: 100%;
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 5px;
+  height: 100%;
+  cursor: pointer;
+}
+.prod-card:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+  box-shadow: 3px 3px rgb(227, 225, 225);
+}
+
+.cart-btn > button:hover {
+  background-color: red;
+}

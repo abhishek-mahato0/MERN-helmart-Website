@@ -1,0 +1,134 @@
+.user-profile-container {
+  position: absolute;
+  top: 31px;
+  right: 35px;
+  background-color: rgb(233, 233, 233);
+  border-radius: 10px;
+  z-index: 1000;
+  width: 230px;
+  height: 260px;
+  color: black;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  animation-duration: 0.2s;
+  -webkit-animation: profile 0.2s;
+}
+.blur {
+  filter: blur(1.2px);
+}
+.profile-img {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.pr-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 6px;
+  right: 30%;
+  z-index: 10;
+  font-size: large;
+  background-color: rgb(198, 193, 193);
+  border-radius: 50%;
+}
+.profile-img > img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.search-text {
+  position: relative;
+}
+@keyframes profile {
+  0% {
+    width: 0px;
+    height: 0px;
+  }
+  100% {
+    width: 240px;
+    height: 260px;
+  }
+}
+
+.user-profile-container > h1 {
+  width: 100%;
+  font-weight: bold;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.user-profile-container > p {
+  width: 100%;
+  font-weight: 200;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3px;
+  margin-bottom: 10px;
+}
+.user-profile-container > .orderlink {
+  width: 100%;
+  font-weight: 200;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.user-profile-container > .logout-btn {
+  border-top: 1px solid rgb(100, 99, 99);
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.user-profile-container > .logout-btn-lod {
+  border-top: 3px solid rgb(255, 0, 0);
+  width: 100%;
+  height: 0px;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  animation-duration: 3s;
+  -webkit-animation: load 3s infinite;
+}
+@keyframes load {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.logout-btn > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35%;
+  height: 60%;
+  margin-right: 10px;
+  background-color: red;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.logout-btn > button:hover {
+  transform: scale(1.02);
+}

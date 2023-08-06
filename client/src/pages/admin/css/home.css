@@ -1,0 +1,51 @@
+.admin-home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.admin-container {
+  width: 90%;
+  /* display: flex; */
+}
+.admin-top {
+  display: flex;
+  width: 70%;
+  margin: 10px 15%;
+  height: 5vh;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.create-btn,
+.admin-orders {
+  display: flex;
+  align-items: center;
+  width: 40%;
+}
+.create-btn > button,
+.admin-orders > button {
+  width: 100%;
+  height: 30px;
+  cursor: pointer;
+}
+
+.admin-prod {
+  display: grid;
+  margin-top: 30px;
+  gap: 14px;
+  grid-template-columns: 33% 33% 33%;
+}
+
+@media (max-width: 768px) {
+  .admin-prod {
+    display: flex;
+    flex-direction: column;
+  }
+  .admin-top {
+    display: flex;
+    width: 100%;
+    margin: 10px;
+  }
+}

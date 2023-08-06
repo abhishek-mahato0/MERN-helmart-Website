@@ -1,0 +1,91 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(243, 242, 242);
+}
+.text-white {
+  color: white;
+}
+.decoration-none {
+  text-decoration: none;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+.flex-start {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.text-black {
+  color: black;
+}
+.flex-end {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.grid-col-2 {
+  display: grid;
+  grid-template-columns: 60% 30%;
+}
+.grid-col-3 {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+.home-page {
+  width: 100%;
+  height: 60vh;
+}
+.trending {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 5px 10px 5px;
+}
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 5px 10px 5px;
+}
+.new-arrival {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 5px 10px 5px;
+}
+.title {
+  width: 250px;
+  border-bottom: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+.card-div {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+  .card-div {
+    display: flex;
+    flex-direction: column;
+  }
+}
