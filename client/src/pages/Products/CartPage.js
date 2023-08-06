@@ -7,7 +7,7 @@ import Footer from '../../components/footer/Footer';
 import './css/cartpage.css';
 
 const CartPage = () => {
-  const cart = useSelector((state) => state.cart);
+  const { cart } = useSelector((state) => state.cart);
   let sub = 0;
   return (
     <div className="cart-page-container">
@@ -22,7 +22,7 @@ const CartPage = () => {
         <h1>Total</h1>
         <h1> </h1>
       </div>
-      {cart.cart.length == 0 ? (
+      {cart.length <= 0 ? (
         <div className="empty-message">
           <h1>Your Cart is Empty</h1>
           <NavLink to="/products" className="navlink">
@@ -32,7 +32,7 @@ const CartPage = () => {
       ) : (
         <>
           <div className="cart-page-items">
-            {cart.cart.map((prod) => {
+            {cart?.map((prod) => {
               sub = sub + prod.total;
               return <CartCard x={prod ? prod : []} />;
             })}

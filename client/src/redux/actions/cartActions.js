@@ -30,6 +30,7 @@ export const removeFromcart = (id) => async (dispatch, getState) => {
     type: REMOVE_FROM_CART_SUCCESS,
     payload: id,
   });
+  localStorage.setItem('cart', JSON.stringify(getState().cart.cart));
 };
 
 export const decreaseQty = (id) => async (dispatch, getState) => {
@@ -37,6 +38,7 @@ export const decreaseQty = (id) => async (dispatch, getState) => {
     type: DECREASE_QTY,
     payload: id,
   });
+  localStorage.setItem('cart', JSON.stringify(getState().cart.cart));
 };
 
 export const increaseQty = (id) => async (dispatch, getState) => {
@@ -44,4 +46,5 @@ export const increaseQty = (id) => async (dispatch, getState) => {
     type: INCREASE_QTY,
     payload: id,
   });
+  localStorage.setItem('cart', JSON.stringify(getState().cart.cart));
 };

@@ -42,7 +42,7 @@ let initialState = {
   cart: {
     cart: localStorage.getItem('cart')
       ? JSON.parse(localStorage.getItem('cart'))
-      : {},
+      : [],
   },
 };
 
