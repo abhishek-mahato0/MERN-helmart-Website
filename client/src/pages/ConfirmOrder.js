@@ -19,19 +19,27 @@ const ConfirmOrder = () => {
   const { shippingAdd } = useSelector((state) => state.shipping);
   const { cart } = useSelector((state) => state.cart);
   const placeOrderHandler = async () => {
-    setLoading(true);
-    const { data } = await axios.post(
-      'https://mern-helmart-website.vercel.app/api/v1/orders',
-      {
-        shippingInfo: shippingAdd,
-        products: cart,
-        total: subtotal + (13 / 100) * subtotal + 100,
+    try {
+      setLoading(true);
+      const { data } = await axios.post(
+        'https://mern-helmart-website.vercel.app/api/v1/orders',
+        {
+          shippingInfo: shippingAdd,
+          products: cart,
+          total: subtotal + (13 / 100) * subtotal + 100,
+        }
+      );
+      if (data) {
+        toast.success('Order placed successfully');
+        navigate('/myorders');
+        setLoading(false);
+      } else {
+        toast.success('Order failed');
+        setLoading(false);
       }
-    );
-    if (data) {
-      toast.success('Order placed successfully');
-      navigate('/myorders');
+    } catch (error) {
       setLoading(false);
+      toast.error('Failed. Please try again');
     }
   };
   return (
