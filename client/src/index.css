@@ -54,19 +54,19 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 50px 5px 10px 5px;
+  margin: 80px 5px 10px 5px;
 }
 .top {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 50px 5px 10px 5px;
+  margin: 40px 5px 10px 5px;
 }
 .new-arrival {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 50px 5px 10px 5px;
+  margin: 40px 5px 10px 5px;
 }
 .title {
   width: 250px;

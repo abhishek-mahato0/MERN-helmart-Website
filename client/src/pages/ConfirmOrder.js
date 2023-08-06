@@ -8,15 +8,18 @@ import Footer from '../components/footer/Footer';
 import toast from 'react-hot-toast';
 import { confirmOrder } from '../redux/actions/orderActions';
 import './css/confirm.css';
+import { useState } from 'react';
+import Loading from '../components/Loading';
 
 const ConfirmOrder = () => {
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   let subtotal = 0;
   const { shippingAdd } = useSelector((state) => state.shipping);
   const { cart } = useSelector((state) => state.cart);
   const placeOrderHandler = async () => {
-    console.log(cart);
+    setLoading(true);
     const { data } = await axios.post(
       'https://mern-helmart-website.vercel.app/api/v1/orders',
       {
@@ -28,11 +31,12 @@ const ConfirmOrder = () => {
     if (data) {
       toast.success('Order placed successfully');
       navigate('/myorders');
+      setLoading(false);
     }
   };
   return (
     <>
-      <div className="placeorder">
+      <div className={`placeorder ${loading ? 'blur' : ''}`}>
         <div className="placeorder-main">
           <div className="link">
             <Link to="/details">Go Back</Link>
@@ -97,9 +101,11 @@ const ConfirmOrder = () => {
               <h3>Total Payment: {subtotal + (13 / 100) * subtotal + 100}</h3>
             </div>
             <div className="fbtn">
-              <button onClick={placeOrderHandler} disabled={cart.length === 0}>
-                Confirm Order
-              </button>
+              {loading ? (
+                <Loading />
+              ) : (
+                <button onClick={placeOrderHandler}>Confirm Order</button>
+              )}
             </div>
           </div>
         </div>

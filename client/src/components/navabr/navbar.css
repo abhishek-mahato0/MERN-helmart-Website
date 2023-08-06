@@ -37,6 +37,9 @@
   gap: 20px;
   padding: 10px;
 }
+.right-flex {
+  margin-right: 10px;
+}
 .middle-container {
   height: 60%;
   width: 100%;

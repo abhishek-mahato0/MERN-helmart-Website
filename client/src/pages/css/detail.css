@@ -9,6 +9,8 @@
 }
 
 .form {
+  display: flex;
+  flex-direction: column;
   width: 40%;
   background-color: aliceblue;
   min-height: max-content;
