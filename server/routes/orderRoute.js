@@ -12,28 +12,29 @@ orderRoute.post('/orders', verifyToken, async (req, res) => {
     const { shippingInfo, products, total } = req.body;
     if (!shippingInfo || !products || !total) {
       res.status(401).json({ message: 'Please fill the requires fields' });
-    }
-    const user = await Users.findById(_id);
-    if (user) {
-      const order = new Orders({
-        shippingInfo,
-        products,
-        total,
-        user: _id,
-      });
-      const createdorder = await order.save();
-      products.forEach(async (element) => {
-        const product = await Products.findById({ _id: element.id });
-        if (product.stock > 0) {
-          product.stock = product.stock - element.qty;
-          await product.save();
-        } else {
-          res.status(400).json({ message: 'Product Out of Stock' });
-        }
-      });
-      res.status(200).json({ createdorder });
     } else {
-      res.status(400).json({ message: 'Please login' });
+      const user = await Users.findById(_id);
+      if (user) {
+        const order = new Orders({
+          shippingInfo,
+          products,
+          total,
+          user: _id,
+        });
+        const createdorder = await order.save();
+        products.forEach(async (element) => {
+          const product = await Products.findById({ _id: element.id });
+          if (product.stock > 0) {
+            product.stock = product.stock - element.qty;
+            await product.save();
+          } else {
+            res.status(400).json({ message: 'Product Out of Stock' });
+          }
+        });
+        res.status(200).json({ createdorder });
+      } else {
+        res.status(400).json({ message: 'Please login' });
+      }
     }
   } catch (error) {
     res.status(400).json({ message: error.message });
