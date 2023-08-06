@@ -33,6 +33,6 @@ app.use('/api/v1', productRoute);
 app.use('/api/v1', orderRoute);
 app.use('/api/v1', userRoute);
 
-app.listen(4000, () => {
+app.listen(process.env.PORT, () => {
   console.log('Server working');
 });
