@@ -261,7 +261,7 @@ select {
   position: fixed;
   top: 60%;
   right: -500px;
-  background-image: url('/Users/abhishekmahato/Desktop/Mern /working/BikersMart/client/public/images/poster2.png');
+  background-image: url('../../../public/images/poster2.png');
   background-size: cover; /* Adjust as needed */
   height: 600px;
   border-radius: 50%;
