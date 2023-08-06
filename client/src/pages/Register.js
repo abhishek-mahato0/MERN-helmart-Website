@@ -20,7 +20,19 @@ const Register = () => {
 
   const submit = async () => {
     try {
-      if (username && password && name && avatar) {
+      function isValidEmail(username) {
+        return /\S+@\S+\.\S+/.test(username);
+      }
+      if (!isValidEmail(username)) {
+        setLoading(false);
+        toast.error('Invalid email address');
+      } else if (password.length < 8) {
+        setLoading(false);
+        toast.error('Password should be greater than 8 characters');
+      } else if (!username || !password || !name || !avatar) {
+        setLoading(false);
+        toast.error('Please provide all the credentials');
+      } else {
         setLoading(true);
         const form = new FormData();
         form.append('name', name);
@@ -39,10 +51,10 @@ const Register = () => {
           toast.success('Registration successfull');
           setLoading(false);
           navigate('/');
+        } else {
+          setLoading(false);
+          toast.error('Error occured please try again.');
         }
-      } else {
-        setLoading(false);
-        toast.error('Please provide all the credentials');
       }
     } catch (error) {
       setLoading(false);
