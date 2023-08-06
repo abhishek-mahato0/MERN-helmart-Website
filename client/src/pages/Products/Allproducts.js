@@ -17,7 +17,9 @@ const Allproducts = () => {
   const [brand, setBrand] = useState('all');
   const [cat, setCat] = useState([]);
   async function getbrand() {
-    const { data } = await axios.get(`http://localhost:4000/api/v1/getbrand`);
+    const { data } = await axios.get(
+      `https://mern-helmart-website.vercel.app/api/v1/getbrand`
+    );
     if (data) {
       setCat(data);
     }

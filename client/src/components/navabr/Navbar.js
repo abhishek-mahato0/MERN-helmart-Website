@@ -24,7 +24,7 @@ const Navbar = () => {
   const [copied, setCopied] = useState(false);
   const loadProd = async () => {
     const { data } = await axios.get(
-      `http://localhost:4000/api/v1/searchproducts?name=${items}`
+      `https://mern-helmart-website.vercel.app/api/v1/searchproducts?name=${items}`
     );
     if (data) {
       setProduc(data);

@@ -36,7 +36,7 @@ const ViewOrders = () => {
   const deleteOrder = async (id) => {
     try {
       const { data } = await axios.delete(
-        `http://localhost:4000/api/v1/admin/deleteorder/${id}`,
+        `https://mern-helmart-website.vercel.app/api/v1/admin/deleteorder/${id}`,
         {
           withCredentials: true,
         }
@@ -51,7 +51,7 @@ const ViewOrders = () => {
   const updateStatus = async (id, status) => {
     try {
       const { data } = await axios.put(
-        `http://localhost:4000/api/v1/admin/updateorder/${id}`,
+        `https://mern-helmart-website.vercel.app/api/v1/admin/updateorder/${id}`,
         {
           status,
         },

@@ -9,7 +9,7 @@ const Prodcard = ({ x }) => {
   const navigate = useNavigate();
   const deleteProd = async () => {
     const { data } = await axios.delete(
-      `http://localhost:4000/api/v1/delete/${x._id}`
+      `https://mern-helmart-website.vercel.app/api/v1/delete/${x._id}`
     );
     alert(data.message);
     navigate('/adminpanel');

@@ -15,7 +15,7 @@ export const loadadminproduct =
     });
     try {
       const res = await axios.get(
-        `http://localhost:4000/api/v1/admin/products?category=${category}&price=${price}&brand=${brand}`
+        `https://mern-helmart-website.vercel.app/api/v1/admin/products?category=${category}&price=${price}&brand=${brand}`
       );
       dispatch({
         type: LOAD_ADMIN_PRODUCTS_SUCCESS,
@@ -34,7 +34,9 @@ export const viewadminorders = () => async (dispatch) => {
     type: VIEW_ADMIN_ORDERS_REQUEST,
   });
   try {
-    const res = await axios.get(`http://localhost:4000/api/v1/admin/allorders`);
+    const res = await axios.get(
+      `https://mern-helmart-website.vercel.app/api/v1/admin/allorders`
+    );
     dispatch({
       type: VIEW_ADMIN_ORDERS_SUCCESS,
       payload: res.data,

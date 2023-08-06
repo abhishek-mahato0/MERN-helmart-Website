@@ -14,7 +14,7 @@ const Myorder = () => {
       try {
         setLoading(true);
         const { data } = await axios.get(
-          'http://localhost:4000/api/v1/order/my',
+          'https://mern-helmart-website.vercel.app/api/v1/order/my',
           {
             withCredentials: true, // Include cookies and other credentials with the request
           }
@@ -41,7 +41,7 @@ const Myorder = () => {
           onClick: async () => {
             try {
               const { data } = await axios.put(
-                `http://localhost:4000/api/v1/user/cancelorder/${id}`,
+                `https://mern-helmart-website.vercel.app/api/v1/user/cancelorder/${id}`,
                 {
                   withCredentials: true,
                 }

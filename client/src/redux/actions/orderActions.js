@@ -24,11 +24,14 @@ export const confirmOrder = (shipping, cart, total) => async (dispatch) => {
     type: CONFIRM_ORDER_REQUEST,
   });
   try {
-    const { data } = await axios.post('http://localhost:4000/api/v1/orders', {
-      shippingInfo: shipping,
-      products: cart,
-      total: total,
-    });
+    const { data } = await axios.post(
+      'https://mern-helmart-website.vercel.app/api/v1/orders',
+      {
+        shippingInfo: shipping,
+        products: cart,
+        total: total,
+      }
+    );
     dispatch({
       type: CONFIRM_ORDER_SUCCESS,
       payload: data,
@@ -44,7 +47,7 @@ export const confirmOrder = (shipping, cart, total) => async (dispatch) => {
 export const getInduserOrder = (id) => async (dispatch) => {
   try {
     const { data } = await axios.get(
-      `http://localhost:4000/api/v1/admin/induser/${id}`
+      `https://mern-helmart-website.vercel.app/api/v1/admin/induser/${id}`
     );
     if (data) {
       dispatch({

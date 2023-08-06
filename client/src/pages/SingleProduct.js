@@ -77,7 +77,7 @@ const SingleProduct = () => {
     try {
       setLoading(true);
       const { data } = await axios.post(
-        `http://localhost:4000/api/v1/review/${id}`,
+        `https://mern-helmart-website.vercel.app/api/v1/review/${id}`,
         {
           star,
           text: revmes,

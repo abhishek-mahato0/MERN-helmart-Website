@@ -17,11 +17,14 @@ const ConfirmOrder = () => {
   const { cart } = useSelector((state) => state.cart);
   const placeOrderHandler = async () => {
     console.log(cart);
-    const { data } = await axios.post('http://localhost:4000/api/v1/orders', {
-      shippingInfo: shippingAdd,
-      products: cart,
-      total: subtotal + (13 / 100) * subtotal + 100,
-    });
+    const { data } = await axios.post(
+      'https://mern-helmart-website.vercel.app/api/v1/orders',
+      {
+        shippingInfo: shippingAdd,
+        products: cart,
+        total: subtotal + (13 / 100) * subtotal + 100,
+      }
+    );
     if (data) {
       toast.success('Order placed successfully');
       navigate('/myorders');

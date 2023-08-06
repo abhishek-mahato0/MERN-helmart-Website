@@ -58,7 +58,7 @@ const UpdateProduct = () => {
   const updateProduct = async () => {
     try {
       const { data } = await axios.put(
-        `http://localhost:4000/api/v1/update/${id}`,
+        `https://mern-helmart-website.vercel.app/api/v1/update/${id}`,
         {
           name,
           price,

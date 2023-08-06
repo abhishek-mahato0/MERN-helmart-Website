@@ -8,7 +8,7 @@ import {
 
 export const addtocart = (id) => async (dispatch, getState) => {
   const { data } = await axios.get(
-    `http://localhost:4000/api/v1/product/${id}`
+    `https://mern-helmart-website.vercel.app/api/v1/product/${id}`
   );
   const amt = (data.disc * data.price) / 100;
   dispatch({

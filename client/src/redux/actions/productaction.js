@@ -26,7 +26,7 @@ export const loadAllProduct = (category, price, brand) => async (dispatch) => {
   });
   try {
     const { data } = await axios.get(
-      `http://localhost:4000/api/v1/products?category=${category}&price=${price}&brand=${brand}`
+      `https://mern-helmart-website.vercel.app/api/v1/products?category=${category}&price=${price}&brand=${brand}`
     );
     dispatch({
       type: LOAD_PRO_SUCCESS,
@@ -46,7 +46,7 @@ export const loadsingleProduct = (id) => async (dispatch) => {
   });
   try {
     const { data } = await axios.get(
-      `http://localhost:4000/api/v1/product/${id}`
+      `https://mern-helmart-website.vercel.app/api/v1/product/${id}`
     );
 
     dispatch({
@@ -67,7 +67,7 @@ export const loadrelatedProduct = (id) => async (dispatch) => {
   });
   try {
     const { data } = await axios.get(
-      `http://localhost:4000/api/v1/relatedproduct/${id}`
+      `https://mern-helmart-website.vercel.app/api/v1/relatedproduct/${id}`
     );
 
     dispatch({
@@ -88,7 +88,7 @@ export const topProduct = () => async (dispatch) => {
   });
   try {
     const { data } = await axios.get(
-      'http://localhost:4000/api/v1/topproducts'
+      'https://mern-helmart-website.vercel.app/api/v1/topproducts'
     );
     dispatch({
       type: LOAD_TOP_SUCCESS,
@@ -107,7 +107,7 @@ export const trendingProduct = () => async (dispatch) => {
   });
   try {
     const { data } = await axios.get(
-      'http://localhost:4000/api/v1/trendingproducts'
+      'https://mern-helmart-website.vercel.app/api/v1/trendingproducts'
     );
     dispatch({
       type: LOAD_TRENDING_SUCCESS,
@@ -127,7 +127,7 @@ export const newProduct = () => async (dispatch) => {
   });
   try {
     const { data } = await axios.get(
-      'http://localhost:4000/api/v1/newproducts'
+      'https://mern-helmart-website.vercel.app/api/v1/newproducts'
     );
     dispatch({
       type: LOAD_NEW_SUCCESS,

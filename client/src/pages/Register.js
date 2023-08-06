@@ -28,7 +28,7 @@ const Register = () => {
         form.append('password', password);
         form.append('avatar', avatar);
         const { data } = await axios.post(
-          'http://localhost:4000/api/v1/register',
+          'https://mern-helmart-website.vercel.app/api/v1/register',
           form,
           {
             withCredentials: true,

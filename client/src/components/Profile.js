@@ -20,7 +20,9 @@ function Profile({ setProfile }) {
     e.preventDefault();
     try {
       setLoading(true);
-      const { data } = await axios.post('http://localhost:4000/api/v1/logout');
+      const { data } = await axios.post(
+        'https://mern-helmart-website.vercel.app/api/v1/logout'
+      );
       if (data) {
         toast.success(data.message);
         setLoading(false);
@@ -42,7 +44,7 @@ function Profile({ setProfile }) {
         const form = new FormData();
         form.append('avatar', img);
         const { data } = await axios.put(
-          'http://localhost:4000/api/v1/user/update/avatar',
+          'https://mern-helmart-website.vercel.app/api/v1/user/update/avatar',
           form,
           { withCredentials: true }
         );

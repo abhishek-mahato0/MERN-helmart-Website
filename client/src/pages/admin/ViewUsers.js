@@ -10,7 +10,7 @@ const ViewUsers = () => {
   const GetallUsers = async () => {
     try {
       const { data } = await axios.get(
-        'http://localhost:4000/api/v1/allusers',
+        'https://mern-helmart-website.vercel.app/api/v1/allusers',
         {
           withCredentials: true, // Include cookies and other credentials with the request
         }

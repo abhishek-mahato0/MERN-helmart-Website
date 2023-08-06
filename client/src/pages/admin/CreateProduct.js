@@ -45,7 +45,7 @@ const CreateProduct = () => {
         form.append('img', prodimg[sing]);
       }
       const { data } = await axios.post(
-        'http://localhost:4000/api/v1/createproducts',
+        'https://mern-helmart-website.vercel.app/api/v1/createproducts',
         form,
         {
           withCredentials: true,
